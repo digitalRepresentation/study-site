@@ -3,5 +3,5 @@
     
 
     // PCバージョン
-    include "/login/index_pc.html";
+    include "login/index_pc.html";
 ?>

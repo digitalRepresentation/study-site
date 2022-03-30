@@ -3,5 +3,5 @@
     
 
     // PCバージョン
-    include "/signup/index_pc.html";
+    include "signup/index_pc.html";
 ?>
