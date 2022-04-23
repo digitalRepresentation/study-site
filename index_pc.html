@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main_style.css">
     <title>Document</title>
 </head>
 <body>
-    トップページ
+  <section class="page_base">
+    <div class="sidenav_wrap">
+      <div class="sidenav_buton" onclick="toggleSidenav()"></div>
+      <div id="sidenav"  class="sidenav">
+        <ul>
+          <li>button1</li>
+          <li>button2</li>
+          <li>button3</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page_main">
+      <div class="header">
+
+      </div>
+      <div class="main_content">
+
+      </div>
+      <div class="footer">
+        <div class="ver">
+          2022 03 kim&shin
+        </div>
+      </div>
+    </div>
+
+  </section>
 </body>
+<script type="text/javascript">
+function toggleSidenav() {
+  if(document.getElementById("sidenav").classList.contains('close_sidenav')){
+    document.getElementById("sidenav").classList.remove('close_sidenav')
+  } else {
+    document.getElementById("sidenav").classList.add('close_sidenav')
+  }
+}
+
+</script>
 </html>
