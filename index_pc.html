@@ -10,9 +10,13 @@
 <body>
   <section class="page_base">
     <div class="sidenav_wrap">
-      <button type="button" name="button" onclick="toggleSidenav()"> aaaa</button>
-      <div id="sidenav" class="sidenav">
-            버튼 테스트
+      <div class="sidenav_buton" onclick="toggleSidenav()"></div>
+      <div id="sidenav"  class="sidenav">
+        <ul>
+          <li>button1</li>
+          <li>button2</li>
+          <li>button3</li>
+        </ul>
       </div>
     </div>
 
@@ -36,12 +40,8 @@
 function toggleSidenav() {
   if(document.getElementById("sidenav").classList.contains('close_sidenav')){
     document.getElementById("sidenav").classList.remove('close_sidenav')
-      document.getElementById("sidenav").style.visibility = "visible"
-      document.getElementById("sidenav").style.width = "230px"
   } else {
     document.getElementById("sidenav").classList.add('close_sidenav')
-      document.getElementById("sidenav").style.visibility = 'hidden';
-      document.getElementById("sidenav").style.width = "60px"
   }
 }
 

@@ -1,20 +1,40 @@
 .page_base {
-  min-height: 100%;
-
+  width: 100%;
+  position: relative;
+  display: flex;
 }
+.sidenav_wrap{
+  position: relative;
+}
+
+.sidenav_buton{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 60px;
+  height: 60px;
+  background-color: #54c1e3;
+}
+
 .sidenav {
+  position: relative;
   height: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   overflow: hidden;
   width: 230px;
   padding-top: 60px;
   padding-bottom: 12px;
-  background-color: #746371;
+  background-color: #54a7e3;
+  opacity: 0.4;
   visibility: visible;
 }
+ul{
+ list-style:none;
+ }
 .close_sidenav {
   background-color: black;
-  width: 60px;
+  width: 0;
   overflow: hidden;
   visibility: hidden;
 }
