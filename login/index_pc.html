@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>study勉強サイトログイン画面</title>
 </head>
 <body>
-    loginページ
+    <h3>LOGIN FORM</h3>
+    <form id="loginForm" name="loginForm" method="POST" action="login.php">
+        ID : 
+        <input type="text" name="id"> <br>
+        PW : 
+        <input type="password" name="password"> <br>
+        <input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
+        <input type="submit" value="ログイン">
+    </form>
+    <a href="/signup">アカウント追加する。</a>
 </body>
 </html>
