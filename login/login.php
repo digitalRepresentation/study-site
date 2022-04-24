@@ -3,29 +3,34 @@
     require_once(DOCUMENT_ROOT .'/lib/DB.php');
 
     session_start();
+    # session auth
     if($_SESSION['token'] !== $_POST['token']) {
-        //TO DO 403error
+        # 403error
+        http_response_code(403);
+        die('403 Forbidden!');
     }
 
-    //SELECT
+    # SELECT
     $stmt = $pdo->prepare("SELECT * FROM user WHERE user_id = :id AND password = :password ");
-    //PARAM
+    # PARAM
     $stmt->bindValue(':id', $_POST['id']);
     $stmt->bindValue(':password', $_POST['password']);
-    //SQL実行
+    # SQL実行
     $res = $stmt->execute();
-    
+    # SQL 一つの値を取得する。
     $data = $stmt->fetch();
 
-    #loginが可能になった。
+    # login成功
     if ($data) {
-        
         $_SESSION['login_id'] = $data['id'];
         $_SESSION['login_password'] = $data['password'];
-        include DOCUMENT_ROOT . "/index.php";
+        header("Location: " . HTTP_ADDRESS . "/index.php");
+    # login失敗
     }else {
-        echo "IDまたはパスワードが違います。";
-        include DOCUMENT_ROOT . "/login/index_pc.html";
+        session_start();
+        # 失敗メッセージ
+        $_SESSION['message'] = "<div class='alert alert-danger'>IDまたはパスワードが間違いました。確認後試してくださいませ</div>";
+        header("Location: " . HTTP_ADDRESS . "/login/index.php");
     }
     
     
