@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteBase /
+
+# urlにindex.phpがある場合にredirectしてrootのurlになるように設定。
+RewriteCond %{THE_REQUEST} ^.*/index\.php 
+RewriteRule ^(.*)index.php$ /$1 [R=301,L] 
