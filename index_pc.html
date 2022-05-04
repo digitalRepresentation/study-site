@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main_style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/main_style.css?v=20220502">
+    <script type="text/javascript" src="./js/main.js"></script>
+    <title> K&S STUDY</title>
 </head>
 <body>
   <section class="page_base">
     <div class="sidenav_wrap">
-      <div class="sidenav_buton" onclick="toggleSidenav()"></div>
+      <div class="sidenav_buton" onclick="toggleSidenav()"><span class="sidenav_buton_icon">=<span/></div>
       <div id="sidenav"  class="sidenav">
-        <ul>
-          <li>button1</li>
-          <li>button2</li>
-          <li>button3</li>
-        </ul>
+        <span>button1</span>
+        <span>button2</span>
+        <span>button3</span>
+        <span>button4</span>
+        <span>button5</span>
       </div>
     </div>
 
     <div class="page_main">
       <div class="header">
-
+        K&S STUDY
       </div>
       <div class="main_content">
 
@@ -36,14 +37,4 @@
 
   </section>
 </body>
-<script type="text/javascript">
-function toggleSidenav() {
-  if(document.getElementById("sidenav").classList.contains('close_sidenav')){
-    document.getElementById("sidenav").classList.remove('close_sidenav')
-  } else {
-    document.getElementById("sidenav").classList.add('close_sidenav')
-  }
-}
-
-</script>
 </html>
