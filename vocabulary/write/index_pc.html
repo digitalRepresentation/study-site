@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            width: 805px;
+            min-height: 800px;
+        }
+        .content > .contentHeader {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #6f7275;
+        }
+        .content > .panel {
+            border-radius: 0;
+            border-color: #ddd;
+            padding: 15px;
+            border: 1px solid;
+        }
+        .content > .panel > .articleForm {
+            width: 690px;
+            margin: auto;
+        }
+        .content > .panel > .articleForm > .formGroup {
+            margin-bottom: 15px;
+        }
+        .content > .panel > .articleForm > .formGroup > .formControl {
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+        }
+        .content > .panel > .articleForm > .formGroup > .formTextarea {
+            display: block;
+            width: 100%;
+            height: 340px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="content">
+            <div class="contentHeader">
+                <h3>単語帳投稿</h3>
+            </div>
+            <div class="panel">
+                <form method="post" class="articleForm" action="/vocabulary/index.php">
+                    <div class="formGroup">
+                        <select name="levelCode" class="formControl" required>
+                            <option value>レベルを選択してください。</option>
+                            <option value="levelElementary">初級</option>
+                            <option value="levelIntermediate">中級</option>
+                            <option value="levelLuxury">高級</option>
+                        </select>
+                    </div>
+                    <div class="formGroup">
+                        <input type="text" name="title" class="formControl" placeholder="単語帳名を入力してください。" required>
+                    </div>
+                    <div class="formGroup">
+                        <textarea name="description" class="formTextarea" required></textarea>
+                    </div>
+                    <input type="submit" value="登録">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
