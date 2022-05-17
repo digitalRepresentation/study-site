@@ -5,17 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>study勉強サイトログイン画面</title>
+    <style>
+    @import "/css/reset.css";
+
+        * {
+            box-sizing: border-box;
+        }
+        .loginFormTitle > h2 {
+            font-family: century-gothic,sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 70px;
+            letter-spacing: .08em;
+            color: #595656;
+        }
+        .loginFormTitle > p {
+            display: inline-block;
+            font-size: 18px;
+            letter-spacing: .16em;
+            color: #595656;
+            margin-left: 40px;
+            position: relative;
+            font-weight: 700;
+            padding-bottom: 10px;
+            top: -15px;
+            margin-left: 5px;
+            margin-top: 20px;
+        }
+        .loginFormTitle > p:before {
+            content:"";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background-color: #595656;
+        }
+        .loginItem {
+            color: #3c3c3c;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: .18em;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .loginText {
+            background-color:oldlace;
+            height: 50px;
+        }
+        .loginFormTextSet {
+            margin-block: 10px;
+        }
+        .buttonImage {
+            height:40px;
+            width:80px;
+        }
+        .errorMessage {
+            color:red;
+            font-weight: bold;
+        }
+        
+        
+    </style>
+    
 </head>
 <body>
-    <h3>LOGIN FORM</h3>
-    <form id="loginForm" name="loginForm" method="POST" action="login.php">
-        ID : 
-        <input type="text" name="id"> <br>
-        PW : 
-        <input type="password" name="password"> <br>
-        <input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
-        <input type="submit" value="ログイン">
-    </form>
-    <a href="/signup">アカウント追加する。</a>
+    <section>
+        <div class="loginFormInner">
+            <div class="loginFormHeader">
+                <div class="loginFormTitle">
+                    <h2>LOGIN</h2>
+                    <p>ログインページ</p>
+                </div>
+            </div>
+            <div class="loginFormBody">
+
+            </div>
+            <div class="loginFormFooter">
+                <form id="loginForm" name="loginForm" method="POST" action="login.php" novalidate>
+                    <div id="loginId" class="loginFormTextSet">
+                        <p class="loginItem">ID </p>
+                        <input type="text" name="id" size="40" class="loginText">
+                    </div>
+                    <div id="loginPassword" class="loginFormTextSet">
+                        <p class="loginItem">PW </p>
+                        <input type="password" name="password" size="40" class="loginText">
+                    </div>
+                    <input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
+                    <input type="image" name="formSubmit" src="/img/login/login.png" alt="Submit Form" class="buttonImage" />
+                </form>
+                <p class="errorMessage"><?php echo $message; ?></p>  
+                <!-- TODO イメージ変更、機能実装 -->
+                <a href="/signup">会員登録ページ</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

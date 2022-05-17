@@ -27,9 +27,8 @@
         header("Location: " . HTTP_ADDRESS . "/index.php");
     # login失敗
     }else {
-        session_start();
         # 失敗メッセージ
-        $_SESSION['message'] = "<div class='alert alert-danger'>IDまたはパスワードが間違いました。確認後試してくださいませ</div>";
+        $_SESSION['message'] = "IDまたはパスワードが間違いました。確認後試してくださいませ";
         header("Location: " . HTTP_ADDRESS . "/login/index.php");
     }
     

@@ -8,12 +8,12 @@
     $_SESSION['token'] = $token;
 
     //login失敗時のエラーメッセージ
-    if(isset($_SESSION['message']))
-        {
-            echo $_SESSION['message'];
-            unset($_SESSION['message']);
-        }
-
+    if(!empty($_SESSION['message'])) {
+        $message = $_SESSION['message'];
+        unset($_SESSION['message']);
+    }else {
+        $message = '';
+    }
     // PCバージョン
     include DOCUMENT_ROOT . "/login/index_pc.html";
 ?>
