@@ -5,8 +5,176 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* @import "/css/reset.css"; */
+        .loginSection {
+            background-color: #f5f5f5;
+            font-family: century-gothic,sans-serif;
+        }
+        .loginSection .joinWrap {
+            width: 600px;
+            height: auto;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        .headerLogin {
+            width: 440px;
+            margin: 0 auto;
+            padding: 105px 0 0;
+            position: relative;
+        }
+        .contentLogin {
+            min-height: auto;
+            background-color: #fff;
+        }
+        .contentLoginJoin .searchWrap{
+            padding-top: 32px;
+        }
+        .searchWrap {
+            width: 440px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .contentLoginJoin .searchTab {
+            margin-bottom: 8px;
+        }
+        .searchTab {
+            font-size: 0;
+            margin-bottom: 32px;
+        }
+        .contentLoginJoin .searchTabButtonSelect {
+            color: #2964E0;
+        }
+        .searchTabButton {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            height: 44px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #E0E0E0;
+            cursor:pointer;
+            border: 0;
+        }
+        .searchTabButtonSelect {
+            height: 60px;
+            border-bottom: 2px solid #2964E0;
+        }
+        .contentLoginJoin .searchTabButton h3 {
+            font-size: 19px;
+        }
+        .joinWrap {
+            border-top: 1px solid #f2f2f2;
+            margin-top: 20px;
+        }
+        .join {
+            position: relative;
+            padding-top: 30px;
+            margin-top: 16px;
+        }
+        .join label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 16px;
+            color: #0f0f0f;
+            letter-spacing: -.96px;
+        }
+        .joinError Input {
+            border-color:#D83838;
+        }
+        .join input{
+            border: 1px solid #bfbfbf;
+            border-radius: 4px;
+            font-size: 15px;
+            color: #333;
+            display: block;
+            width: 100%;
+            padding-left: 16px;
+            height: 48px;
+            line-height: 48px;
+            box-sizing: border-box;
+        }
+        .join + .txtErrorArea {
+            margin-top: 5px;
+        }
+        .errTxt {
+            margin-bottom: 10px;
+            color: #db3838;
+            font-size: 13px;
+            letter-spacing: -.02em;
+        }
+        .buttonJoin {
+            width: 100%;
+            height: 52px;
+            line-height: 52px;
+            font-size: 17px;
+            font-weight: bold;
+            background-color: #2964E0;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 24px;
+            border-radius: 4px;
+            border: 0;
+        }
+    </style>
 </head>
 <body>
-    会員登録ページ
+    <section class="loginSection">
+        <div class="joinWrap">
+            <div class="headerLogin">
+                <div class="container contentLogin contentLoginJoin">
+                    <form name="formInfo" method="post">
+                        <div class="searchWrap">
+                            <div class="searchTab">
+                                <button class="searchTabButton searchTabButtonSelect">
+                                    <h3>一般会員</h3>
+                                </button>
+                            </div>
+                            <div class="JoinWrap">
+                                <div class="join joinEmail joinError">
+                                    <label>EMAIL(ID)</label>
+                                    <input class="inputInfo redTxt modifyError" type="text" name="email" placeholder="ex)jin@studyjapan.co.jp">
+                                </div>
+                                <div class="txtErrorArea">
+                                    <p class="errTxt redTxt">メールを入力してください。</p>
+                                </div>
+                                <!-- <p>会員登録のためにメール認証が必要ですので、正しいメール住所を入力してください。</p> -->
+                                <div class="join joinPwd">
+                                    <label>パスワード</label>
+                                    <input class="inputInfo" type="password" name="password" placeholder="8字以上入力してください。">
+                                </div>
+                                <div class="txtErrorArea">
+                                    <p class="errTxt redTxt">パスワードを入力してください。</p>
+                                </div>
+                                <div class="join joinPwdCk">
+                                    <label>パスワードか確認</label>
+                                    <input class="inputInfo" type="password" name="passwordConfirm" placeholder="8字以上入力してください。">
+                                </div>
+                                <div class="txtErrorArea">
+                                    <p class="errTxt redTxt">パスワード確認を入力してください。</p>
+                                </div>
+                                <div class="join joinName">
+                                    <label>お名前（カタカナ）</label>
+                                    <input class="inputInfo" type="text" name="nameKatakana" placeholder="スターディ　タロウ">
+                                </div>
+                                <div class="txtErrorArea">
+                                    <p class="errTxt redTxt">お名前（カタカナ）を入力してください。</p>
+                                </div>
+                                <div class="join joinName">
+                                    <label>ニックネーム</label>
+                                    <input class="inputInfo" type="text" name="nameKatakana" placeholder="スターディ　ニックネーム">
+                                </div>
+                                <div class="txtErrorArea">
+                                    <p class="errTxt redTxt">ニックネームを入力してください。</p>
+                                </div>
+                                <button class="buttonJoin">アカウント登録</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
