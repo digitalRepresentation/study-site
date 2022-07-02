@@ -18,7 +18,7 @@
         .content > .panel {
             border-radius: 0;
             border-color: #ddd;
-            padding: 15px;
+            padding: 15px 15px 45px 15px;
             border: 1px solid;
         }
         .content > .panel > .articleForm {
@@ -52,6 +52,16 @@
             background-image: none;
             border: 1px solid #ccc;
         }
+        .writeButton {
+            float: right;
+            color: #fff;
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+            letter-spacing: 1px;
+            padding: 6px 12px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
@@ -76,7 +86,7 @@
                     <div class="formGroup">
                         <textarea name="description" class="formTextarea" required></textarea>
                     </div>
-                    <input type="submit" value="登録">
+                    <input type="submit" class="writeButton" value="登録">
                 </form>
             </div>
         </div>
